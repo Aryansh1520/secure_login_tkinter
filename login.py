@@ -5,8 +5,8 @@ import time
 root = Tk()
 root.geometry('400x300')
 
-dsn_tns = cx_Oracle.makedsn('aryan-virtual-machine', '1521', service_name='XE')
-conn = cx_Oracle.connect(user=r'aryan_user', password='1520', dsn=dsn_tns)
+dsn_tns = cx_Oracle.makedsn('hostname', 'port', service_name='XE')
+conn = cx_Oracle.connect(user=r'your_oracle-username', password='your pass', dsn=dsn_tns)
 c = conn.cursor()
 
 class page2:
@@ -18,7 +18,7 @@ class page2:
 
 def cursor_on():
     global c , conn
-    conn = cx_Oracle.connect(user=r'aryan_user', password='1520', dsn=dsn_tns)
+    conn = cx_Oracle.connect(user=r'your_oracle_username', password='your_pass', dsn=dsn_tns)
     c = conn.cursor()
 
 def verify_admin_login(root):
